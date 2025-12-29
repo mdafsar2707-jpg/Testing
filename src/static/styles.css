@@ -79,6 +79,13 @@ section h3 {
   margin-top: 12px;
   padding-top: 10px;
   border-top: 1px dashed #eee;
+  transition: all 0.3s ease; /* Smooth transition for prettiness */
+}
+
+.activity-card .participants:hover {
+  background: linear-gradient(135deg, rgba(26,35,126,0.02), rgba(26,35,126,0.05)); /* Subtle hover gradient */
+  border-radius: 6px;
+  padding: 12px 10px 10px; /* Slight padding increase on hover */
 }
 
 .activity-card .participants h5 {
@@ -89,6 +96,13 @@ section h3 {
   background: linear-gradient(90deg, rgba(26,35,126,0.08), rgba(26,35,126,0));
   padding: 4px 8px;
   border-radius: 4px;
+  position: relative;
+}
+
+.activity-card .participants h5::before {
+  content: "👥"; /* Add a people icon for prettiness */
+  margin-right: 6px;
+  font-size: 12px;
 }
 
 .participants-list {
@@ -107,6 +121,13 @@ section h3 {
   border: 1px solid #f0f0f0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.02);
   font-size: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add hover animation */
+}
+
+.participant-item:hover {
+  transform: translateY(-1px); /* Lift effect on hover */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #f8f9fa; /* Light background change */
 }
 
 /* smaller muted text for empty state */
@@ -114,6 +135,7 @@ section h3 {
   color: #666;
   font-size: 14px;
   padding: 6px 0;
+  font-style: italic; /* Make empty state prettier with italics */
 }
 
 .form-group {
